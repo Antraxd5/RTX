@@ -1,0 +1,206 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMe3+PEWNkotKfw1+MPoZ1q",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Antraxd5/RTX/blob/rama1/Ejemplos%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "*   **Realiza una suma de 10 valores**\n",
+        "*   **Verifica si es mayor a 20**\n",
+        "👌👌👌👌\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "r0V44xyxELy5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "h_s1uSBACYTP",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b790e440-3f09-458b-e8d5-c3b684360269"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bienvenido a la calculadora que solo suma 10 números\n",
+            "Ingrese un número: 10\n",
+            "Ingrese un número: 10\n",
+            "Ingrese un número: 10\n",
+            "Ingrese un número: 9\n",
+            "Ingrese un número: 1\n",
+            "Ingrese un número: 2\n",
+            "Ingrese un número: 3\n",
+            "Ingrese un número: 1\n",
+            "Ingrese un número: 3\n",
+            "Ingrese un número: 4\n",
+            "-------------------------------------------------\n",
+            "La suma de los 10 números es igual a: 53\n",
+            "10 + 10 + 10 + 9 + 1 + 2 + 3 + 1 + 3 + 4 = 53\n",
+            "-------------------------------------------------\n",
+            "El resultado de la suma = 53 es mayor a 20\n"
+          ]
+        }
+      ],
+      "source": [
+        "su = 0\n",
+        "valores = []\n",
+        "print(\"Bienvenido a la calculadora que solo suma 10 números\")\n",
+        "\n",
+        "for i in range(10):\n",
+        "    no = int(input(\"Ingrese un número: \"))\n",
+        "    valores.append(no)\n",
+        "    su = no+ su\n",
+        "\n",
+        "\n",
+        "valst = \" + \".join(map(str, valores))\n",
+        "\n",
+        "print(\"-------------------------------------------------\")\n",
+        "print(f\"La suma de los 10 números es igual a: {su}\")\n",
+        "print(f\"{valst} = {su}\")\n",
+        "print(\"-------------------------------------------------\")\n",
+        "\n",
+        "if su > 20:\n",
+        "    print(f\"El resultado de la suma = {su} es mayor a 20\")\n",
+        "else:\n",
+        "    print(f\"El resultado de la suma = {su} es menor o igual a 20\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "*   **Valida si es un numero y si esta en el rango de 10 y 1**\n",
+        "*   **si no le imprime un error**\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "yR8Fro-JFFGS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def validar_rango():\n",
+        "    while True:\n",
+        "        numero_str = input(\"Introduce un número entre 1 y 10: \")\n",
+        "\n",
+        "        # Verificar que la entrada es numérica\n",
+        "        if numero_str.isdigit():\n",
+        "            numero = int(numero_str)\n",
+        "\n",
+        "            # Verificar si el número está en el rango de 1 a 10\n",
+        "            if 1 <= numero <= 10:\n",
+        "                print(\"El número está dentro del rango.\")\n",
+        "                break  # Salir del bucle si el número es válido\n",
+        "            else:\n",
+        "                print(\"Error: El número está fuera del rango. Debe estar entre 1 y 10.\")\n",
+        "        else:\n",
+        "            print(\"Error: Debes ingresar un número válido.\")\n",
+        "\n",
+        "# Llamada a la función\n",
+        "validar_rango()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "skJWg7hsFOn5",
+        "outputId": "7df3f196-596c-4e15-d4ab-1507fc06a0db"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Introduce un número entre 1 y 10: 0\n",
+            "Error: El número está fuera del rango. Debe estar entre 1 y 10.\n",
+            "Introduce un número entre 1 y 10: 3\n",
+            "El número está dentro del rango.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "*   **Suma valores de un argumento**\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "*   **Promedia esos valores utilzando la funcion len()**\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "PuHtFDHPF2NY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def hoal(*num):\n",
+        "    resultado= sum(num)\n",
+        "    resultad2= resultado/ len(num)\n",
+        "    return resultad2\n",
+        "\n",
+        "hoal(10,9,9,8)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CPs4vV76GAqY",
+        "outputId": "e976ebdc-1f76-4aa7-8e99-a55ecd92a4a5"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "9.0"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    }
+  ]
+}
